@@ -1,11 +1,36 @@
+<!DOCTYPE html>
+<html>
+
 <head>
 	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>my first webpage</title>
 
   <style>
+    
+    * {
+      border: 0px white dotted;
+    }
+
+    .main-container {
+      max-width: 640px;
+      margin: auto;
+    }  
+
+    html {
+      min-height: 100%;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 1.0);
+    }
+
     body {
+      color: rgba(255, 255, 255, 1.0);
+      min-height: 100%;
       padding-top: 40px;
       padding-bottom: 40px;
+      background: linear-gradient(90deg, #5b5817, #716a2b, #887d3f, #9f9053, #b6a368, #ceb77d, #e6cc93, #ffe1aa);
     }
 
   .avatar-image {
@@ -22,43 +47,72 @@
     object-fit: cover;
  }
 
+  .item {
+    background-color: rgba(243, 144, 165, 0.5);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .image-row {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .name-row {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .social-icons-row {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .link-text {
+    text-align: center;
+    flex-grow: 1;
+  }
+
  </style>
 </head>
 
 
 <body>
-<div>
+<div class="main-container">
 
-    <div><img class="avatar-image" src="/images/myimage.jpg" width="300" alt="My Photo"></div>
+    <div class="image-row"><img class="avatar-image" src="/images/myimage.jpg" width="300" alt="My Photo"></div>
     
-    <div>Torell Pernell</div>
+    <div class="name-row">Torell Pernell</div>
     
-    <div>
+    <div class="social-icons-row">
       <a href="http://www.github.com/torellpernell/Portfolio-Webpage" target="_blank">GitHub</a>
  
-      <a href="mailto:torellpernell@yahoo.com" target="_blank">Yahoo!</a>
-      
       <a href="http://www.linkedin.com/in/torellpernell" target="_blank">LinkedIn</a>
+      
+      <a href="mailto:torellpernell@yahoo.com" target="_blank">Yahoo!</a>
     </div>
   
   
-    <div>
+    <div class="item">
       <img class="thumbnail" src="/images/programming_languages.png" width="150" alt="Programming languages icon">
-      <a href = "https://www.geeksforgeeks.org/what-is-high-level-language" target="_blank">High-level programming</a>
+      <a class="link-text" href="https://www.geeksforgeeks.org/what-is-high-level-language" target="_blank">High-level programming</a>
     </div>
 
-    <div>
+    <div class="item">
       <img class="thumbnail" src="/images/web_develpment_frameworks.jpg" width="150" alt="Web Frameworks icon">
-      <a href = "https://www.geeksforgeeks.org/what-is-a-framework" target="_blank">Web development frameworks</a>
+      <a class="link-text" href="https://www.geeksforgeeks.org/what-is-a-framework" target="_blank">Web development frameworks</a>
     </div>
 
-    <div>
+    <div class="item">
       <img class="thumbnail" src="/images/backend_development.jpg" width="150" alt="Backend Development icon">
-      <a href = "https://www.geeksforgeeks.org/backend-development" target="_blank">Backend infrastructure</a>
-    </div>      
+      <a class="link-text" href="https://www.geeksforgeeks.org/backend-development" target="_blank">Backend infrastructure</a>
+    </div>    
     
        
 
     
 </div>
 </body>
+</html>
